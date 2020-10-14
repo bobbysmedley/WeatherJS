@@ -7,6 +7,7 @@ class UI {
     this.humidity = document.getElementById('w-humidity');
     this.feelsLike = document.getElementById('w-feels-like');
     this.wind = document.getElementById('w-wind');
+    this.loading = document.getElementById('loading');
   }
 
   paint(weather){
@@ -27,5 +28,13 @@ class UI {
     this.wind.textContent = `Wind speed: ${weather.current.wind_speed} MPH`; 
 
     
+  }
+
+  load(){
+    this.loading.innerHTML = '<img src="img/loading.gif" alt="">';
+  }
+
+  hideLoad(){
+    this.loading.innerHTML = '';
   }
 }

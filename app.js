@@ -26,14 +26,24 @@ document.getElementById('w-change-btn').addEventListener('click', () => {
   // Set location in local storage
   storage.setLocationData(city, state, unit);
 
+  ui.load();
+
   // Get and display weather
-  getWeather();
+  setTimeout(()=>{
+    ui.hideLoad();
+    getWeather();
+  }, 1500);
+
+
 
   // Close modal (uses jquery)
   $('#locModal').modal('hide');
 });
 
+// Declare gettingWheather
+let gettingWheather;
 
+// Get weather
 function getWeather(){
   weather.getWeather()
     .then(results => {
@@ -41,3 +51,6 @@ function getWeather(){
     })
     .catch(err => console.log(err));
 }
+
+
+
