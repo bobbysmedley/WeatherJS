@@ -16,7 +16,6 @@
         <img id="w-icon">
         <ul id="w-details" class="list-group mt-3">
           <li class="list-group-item" id="w-humidity"></li>
-          <li class="list-group-item" id="w-dewpoint"></li>
           <li class="list-group-item" id="w-feels-like"></li>
           <li class="list-group-item" id="w-wind"></li>
         </ul>
@@ -41,6 +40,9 @@
         <div class="modal-body">
           <form action="" id="w-form">
             <div class="form-group">
+              <label for="unit">Unit of Measurement</label>
+            </div>
+            <div class="form-group">
               <label for="city">City</label>
               <input type="text" id="city" class="form-control">
             </div>
@@ -48,6 +50,10 @@
               <label for="state">State</label>
               <input type="text" id="state" class="form-control">
             </div>
+            <select id="unit" class="form-control">
+              <option value="f">Fahrenheit</option>
+              <option value="m">Celcius</option>
+            </select>
           </form>
         </div>
         <div class="modal-footer">
